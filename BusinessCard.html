@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html long="en-us">
+  <html>
+
+    <head>
+      <meta charset="UTF-8">
+      <title> Flora Fauna Business Card</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat&display=swap" rel="stylesheet">
+      <style>
+        body {
+          background: white;
+        }
+
+        .container {
+          background: none;
+          width: 525px;
+          height: 275px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .card {
+          border-style: solid;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: all 0.8s ease;
+          background: #50C878;
+          color: #013220;
+        }
+
+        .horiLine {
+          padding-bottom: 10px;
+          border-bottom: 1px solid #013220;
+        }
+
+        .cardFront {
+          font-family: "Montserrat", sans-serif;
+          font-size: 15px;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          backface-visibility: hidden;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        
+         .cardFront:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+        .cardBack {
+          font-family: "Acme", sans-serif;
+          padding-right: 185px;
+          width: 30%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          backface-visibility: hidden;
+          overflow: hidden;
+          border-radius: 10px;
+          transform: rotateY(180deg);
+          text-align: center;
+        }
+
+        .flipCard {
+          transform: rotateY(180deg);
+        }
+
+        .leftColumn {
+          width: 45% padding: 10px;
+          text-align: left;
+          float: left;
+          padding-top: 60px;
+          padding-left: 15px;
+          font-size: 12px;
+        }
+
+        .rightColumn {
+          width: 45% padding: 10px;
+          text-align: left;
+          float: right;
+          padding-top: 50px;
+          padding-right: 40px;
+          line-height: 0.20;
+        }
+
+        .personJob {
+          line-height: 0.2;
+        }
+
+        .companyName {
+          padding-top: 20px;
+        }
+
+        .vLine {
+          border-left: 3px solid #013220;
+          height: 500px;
+          position: absolute;
+          left: 50%;
+          margin-left: -3px;
+          top: 0;
+        }
+
+      </style>
+      <script>
+        function flipCard() {
+          var flipper = document.getElementById("card");
+          flipper.classList.toggle("flipCard");
+        }
+
+      </script>
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="card" id="card" onclick="flipCard()">
+          <div class="cardFront">
+            <div class="frontImg1">
+              <img src="https://lh3.googleusercontent.com/ZgdJOpFi0ODvQOBBi8E3TCY-Q8ShQwqKuvJWCiMdcztP3CNbxuIDC4y7IPFieILMaXRwnvu0J5Ne5ZpEY9guZjpKplFEucOjPvKnpvvPYK2kscCSgia3GYVgGgVR9NGfeKV-1mYBYw=w2400" width="50" height="37" alt="FlowerLogo">
+            </div>
+            <div class="leftColumn">
+              <h2 class="companyAddNum">
+                1234 Spicewood Dr. 56789 <br>
+                512-123-4567
+              </h2>
+            </div>
+            <div class="vLine">
+            </div>
+            <div class="rightColumn">
+              <div class="personJob">
+                <h1>
+                  Flora Fauna
+                </h1>
+                <h2>
+                  CEO
+                  <div class="horiLine">
+                  </div>
+                </h2>
+              </div>
+              <h3 class="persNum">
+                512-765-4321
+              </h3>
+            </div>
+          </div>
+          <div class="cardBack">
+            <h1 class="companyName">
+              <img src="https://lh3.googleusercontent.com/ZgdJOpFi0ODvQOBBi8E3TCY-Q8ShQwqKuvJWCiMdcztP3CNbxuIDC4y7IPFieILMaXRwnvu0J5Ne5ZpEY9guZjpKplFEucOjPvKnpvvPYK2kscCSgia3GYVgGgVR9NGfeKV-1mYBYw=w2400" width="100" height="75" alt="FlowerLogo"><br>
+              Spicewood Floral
+            </h1>
+          </div>
+        </div>
+      </div>
+    </body>
+
+  </html>
